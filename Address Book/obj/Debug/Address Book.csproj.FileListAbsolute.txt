@@ -1,0 +1,32 @@
+C:\Users\igor\Documents\Visual Studio 2015\Projects\github\Address Book\Address Book\bin\Debug\App.xbf
+C:\Users\igor\Documents\Visual Studio 2015\Projects\github\Address Book\Address Book\bin\Debug\MainPage.xbf
+C:\Users\igor\Documents\Visual Studio 2015\Projects\github\Address Book\Address Book\bin\Debug\Address Book.xr.xml
+C:\Users\igor\Documents\Visual Studio 2015\Projects\github\Address Book\Address Book\bin\Debug\Address Book.exe
+C:\Users\igor\Documents\Visual Studio 2015\Projects\github\Address Book\Address Book\bin\Debug\Address Book.pdb
+C:\Users\igor\Documents\Visual Studio 2015\Projects\github\Address Book\Address Book\bin\Debug\resources.pri
+C:\Users\igor\Documents\Visual Studio 2015\Projects\github\Address Book\Address Book\bin\Debug\AppxManifest.xml
+C:\Users\igor\Documents\Visual Studio 2015\Projects\github\Address Book\Address Book\bin\Debug\Address Book.build.appxrecipe
+C:\Users\igor\Documents\Visual Studio 2015\Projects\github\Address Book\Address Book\obj\Debug\App.g.i.cs
+C:\Users\igor\Documents\Visual Studio 2015\Projects\github\Address Book\Address Book\obj\Debug\App.g.cs
+C:\Users\igor\Documents\Visual Studio 2015\Projects\github\Address Book\Address Book\obj\Debug\MainPage.g.i.cs
+C:\Users\igor\Documents\Visual Studio 2015\Projects\github\Address Book\Address Book\obj\Debug\MainPage.g.cs
+C:\Users\igor\Documents\Visual Studio 2015\Projects\github\Address Book\Address Book\obj\Debug\XamlTypeInfo.g.cs
+C:\Users\igor\Documents\Visual Studio 2015\Projects\github\Address Book\Address Book\obj\Debug\App.xaml
+C:\Users\igor\Documents\Visual Studio 2015\Projects\github\Address Book\Address Book\obj\Debug\MainPage.xaml
+C:\Users\igor\Documents\Visual Studio 2015\Projects\github\Address Book\Address Book\obj\Debug\App.xbf
+C:\Users\igor\Documents\Visual Studio 2015\Projects\github\Address Book\Address Book\obj\Debug\MainPage.xbf
+C:\Users\igor\Documents\Visual Studio 2015\Projects\github\Address Book\Address Book\obj\Debug\XamlSaveStateFile.xml
+C:\Users\igor\Documents\Visual Studio 2015\Projects\github\Address Book\Address Book\obj\Debug\Address Book.exe
+C:\Users\igor\Documents\Visual Studio 2015\Projects\github\Address Book\Address Book\obj\Debug\Address Book.pdb
+C:\Users\igor\Documents\Visual Studio 2015\Projects\github\Address Book\Address Book\obj\Debug\priconfig.xml
+C:\Users\igor\Documents\Visual Studio 2015\Projects\github\Address Book\Address Book\obj\Debug\priconfig.xml.intermediate
+C:\Users\igor\Documents\Visual Studio 2015\Projects\github\Address Book\Address Book\obj\Debug\layout.resfiles
+C:\Users\igor\Documents\Visual Studio 2015\Projects\github\Address Book\Address Book\obj\Debug\layout.resfiles.intermediate
+C:\Users\igor\Documents\Visual Studio 2015\Projects\github\Address Book\Address Book\obj\Debug\resources.resfiles
+C:\Users\igor\Documents\Visual Studio 2015\Projects\github\Address Book\Address Book\obj\Debug\resources.resfiles.intermediate
+C:\Users\igor\Documents\Visual Studio 2015\Projects\github\Address Book\Address Book\obj\Debug\pri.resfiles
+C:\Users\igor\Documents\Visual Studio 2015\Projects\github\Address Book\Address Book\obj\Debug\pri.resfiles.intermediate
+C:\Users\igor\Documents\Visual Studio 2015\Projects\github\Address Book\Address Book\obj\Debug\qualifiers.txt
+C:\Users\igor\Documents\Visual Studio 2015\Projects\github\Address Book\Address Book\obj\Debug\qualifiers.txt.intermediate
+C:\Users\igor\Documents\Visual Studio 2015\Projects\github\Address Book\Address Book\obj\Debug\MultipleQualifiersPerDimensionFound.txt
+C:\Users\igor\Documents\Visual Studio 2015\Projects\github\Address Book\Address Book\obj\Debug\ProjectArchitectures.txt
