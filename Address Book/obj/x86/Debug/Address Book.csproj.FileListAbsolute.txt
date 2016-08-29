@@ -30,3 +30,4 @@ C:\Users\igor\Documents\Visual Studio 2015\Projects\github\Address Book\Address 
 C:\Users\igor\Documents\Visual Studio 2015\Projects\github\Address Book\Address Book\obj\x86\Debug\qualifiers.txt.intermediate
 C:\Users\igor\Documents\Visual Studio 2015\Projects\github\Address Book\Address Book\obj\x86\Debug\MultipleQualifiersPerDimensionFound.txt
 C:\Users\igor\Documents\Visual Studio 2015\Projects\github\Address Book\Address Book\obj\x86\Debug\ProjectArchitectures.txt
+C:\Users\igor\Documents\Visual Studio 2015\Projects\github\Address Book\Address Book\obj\x86\Debug\Address Book.csproj.GenerateResource.Cache
