@@ -15,12 +15,26 @@ namespace Address_Book.ViewModel
     {
 
         SQLiteConnection dbConn;
+        private static MySQLiteHelper instance;
+
+        private MySQLiteHelper() { }
+
+        public static MySQLiteHelper Instance
+        {
+            get
+            {
+                if (instance == null)
+                {
+                    instance = new MySQLiteHelper();
+                    instance.onCreate();
+                }
+                return instance;
+            }
+        }
 
         //Create Tabble 
         public bool onCreate()
         {
-            System.Diagnostics.Debug.WriteLine("Tabelas criadas");
-
             try
             {
                 if (!CheckFileExists(App.DB_PATH).Result)
