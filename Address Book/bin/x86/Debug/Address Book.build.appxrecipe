@@ -58,8 +58,8 @@
     <AppxPackagedFile Include="C:\Users\igor\Documents\Visual Studio 2015\Projects\github\Address Book\Address Book\bin\x86\Debug\App.xbf">
       <PackagePath>App.xbf</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\igor\Documents\Visual Studio 2015\Projects\github\Address Book\Address Book\bin\x86\Debug\MainPage.xbf">
-      <PackagePath>MainPage.xbf</PackagePath>
+    <AppxPackagedFile Include="C:\Users\igor\Documents\Visual Studio 2015\Projects\github\Address Book\Address Book\bin\x86\Debug\Views\MainPage.xbf">
+      <PackagePath>Views\MainPage.xbf</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\igor\Documents\Visual Studio 2015\Projects\github\Address Book\Address Book\bin\x86\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
