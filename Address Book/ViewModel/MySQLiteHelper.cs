@@ -53,7 +53,7 @@ namespace Address_Book.ViewModel
         {
             using (var dbConn = new SQLiteConnection(App.DB_PATH))
             {
-                var existingconact = dbConn.Query<ContactBook>("select * from Contacts where Id =" + contactid).FirstOrDefault();
+                var existingconact = dbConn.Query<ContactBook>("select * from ContactBook where Id =" + contactid).FirstOrDefault();
                 return existingconact;
             }
         }
@@ -73,7 +73,7 @@ namespace Address_Book.ViewModel
         {
             using (var dbConn = new SQLiteConnection(App.DB_PATH))
             {
-                var existingconact = dbConn.Query<ContactBook>("select * from Contacts where Id =" + contact.IdContact).FirstOrDefault();
+                var existingconact = dbConn.Query<ContactBook>("select * from ContactBook where Id =" + contact.IdContact).FirstOrDefault();
                 if (existingconact != null)
                 {
                     existingconact.Name = contact.Name;
@@ -103,7 +103,7 @@ namespace Address_Book.ViewModel
         {
             using (var dbConn = new SQLiteConnection(App.DB_PATH))
             {
-                var existingconact = dbConn.Query<ContactBook>("select * from Contacts where Id =" + Id).FirstOrDefault();
+                var existingconact = dbConn.Query<ContactBook>("select * from ContactBook where Id =" + Id).FirstOrDefault();
                 if (existingconact != null)
                 {
                     dbConn.RunInTransaction(() =>
