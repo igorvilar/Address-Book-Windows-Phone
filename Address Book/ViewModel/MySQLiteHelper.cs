@@ -14,7 +14,7 @@ namespace Address_Book.ViewModel
     class MySQLiteHelper
     {
 
-        SQLiteConnection dbConn;
+        private SQLiteConnection dbConn;
         private static MySQLiteHelper instance;
 
         private MySQLiteHelper() { }
@@ -26,14 +26,17 @@ namespace Address_Book.ViewModel
                 if (instance == null)
                 {
                     instance = new MySQLiteHelper();
-                    instance.onCreate();
+                    if (instance.onCreate()== true)
+                    {
+                        instance.dbConn = new SQLiteConnection(App.DB_PATH);
+                    }
                 }
                 return instance;
             }
         }
 
         //Create Tabble 
-        public bool onCreate()
+        private bool onCreate()
         {
             try
             {
@@ -67,40 +70,31 @@ namespace Address_Book.ViewModel
         // Retrieve the specific contact from the database. 
         public ContactBook ReadContact(int contactid)
         {
-            using (var dbConn = new SQLiteConnection(App.DB_PATH))
-            {
-                var existingconact = dbConn.Query<ContactBook>("select * from ContactBook where IdContact =" + contactid).FirstOrDefault();
+                var existingconact = instance.dbConn.Query<ContactBook>("select * from ContactBook where IdContact =" + contactid).FirstOrDefault();
                 return existingconact;
-            }
         }
         // Retrieve the all contact list from the database. 
         public ObservableCollection<ContactBook> ReadContacts()
         {
-            using (var dbConn = new SQLiteConnection(App.DB_PATH))
-            {
-                List<ContactBook> myCollection = dbConn.Table<ContactBook>().ToList<ContactBook>();
+                List<ContactBook> myCollection = instance.dbConn.Table<ContactBook>().ToList<ContactBook>();
                 ObservableCollection<ContactBook> ContactsList = new ObservableCollection<ContactBook>(myCollection);
                 return ContactsList;
-            }
         }
 
         //Update existing conatct 
         public void UpdateContact(ContactBook contact)
         {
-            using (var dbConn = new SQLiteConnection(App.DB_PATH))
-            {
-                var existingconact = dbConn.Query<ContactBook>("select * from ContactBook where IdContact =" + contact.IdContact).FirstOrDefault();
+                var existingconact = instance.dbConn.Query<ContactBook>("select * from ContactBook where IdContact =" + contact.IdContact).FirstOrDefault();
                 if (existingconact != null)
                 {
                     existingconact.Name = contact.Name;
                     existingconact.Phone = contact.Phone;
                     existingconact.Address = contact.Address;
-                    dbConn.RunInTransaction(() =>
+                instance.dbConn.RunInTransaction(() =>
                     {
-                        dbConn.Update(existingconact);
+                        instance.dbConn.Update(existingconact);
                     });
                 }
-            }
         }
         // Insert the new contact in the Contacts table. 
         public void Insert(ContactBook newcontact)
@@ -117,31 +111,28 @@ namespace Address_Book.ViewModel
         //Delete specific contact 
         public void DeleteContact(int Id)
         {
-            using (var dbConn = new SQLiteConnection(App.DB_PATH))
-            {
-                var existingconact = dbConn.Query<ContactBook>("select * from ContactBook where IdContact =" + Id).FirstOrDefault();
+                var existingconact = instance.dbConn.Query<ContactBook>("select * from ContactBook where IdContact =" + Id).FirstOrDefault();
                 if (existingconact != null)
                 {
-                    dbConn.RunInTransaction(() =>
+                instance.dbConn.RunInTransaction(() =>
                     {
-                        dbConn.Delete(existingconact);
+                        instance.dbConn.Delete(existingconact);
                     });
                 }
-            }
+            
         }
         //Delete all contactlist or delete Contacts table 
         public void DeleteAllContact()
         {
-            using (var dbConn = new SQLiteConnection(App.DB_PATH))
-            {
-                //dbConn.RunInTransaction(() => 
-                //   { 
-                dbConn.DropTable<ContactBook>();
-                dbConn.CreateTable<ContactBook>();
-                dbConn.Dispose();
-                dbConn.Close();
+
+            //dbConn.RunInTransaction(() => 
+            //   { 
+            instance.dbConn.DropTable<ContactBook>();
+            instance.dbConn.CreateTable<ContactBook>();
+            instance.dbConn.Dispose();
+            instance.dbConn.Close();
                 //}); 
             }
-        }
+        
     }
 }

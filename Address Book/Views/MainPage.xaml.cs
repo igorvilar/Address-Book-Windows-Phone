@@ -32,9 +32,9 @@ namespace Address_Book
 
             //  MySQLiteHelper Db_Helper = new MySQLiteHelper();
             // Db_Helper.onCreate();
-          //  MySQLiteHelper.Instance.Insert(new ContactBook("Igor Vilar", "61 8300-5524", "Rua 666")); 
-         //   ContactBook contactBook = MySQLiteHelper.Instance.ReadContact(1);
-        //    System.Diagnostics.Debug.WriteLine("contactBook nome: "+ contactBook.Name);
+            MySQLiteHelper.Instance.Insert(new ContactBook("Igor Vilar", "61 8300-5524", "Rua 666")); 
+            ContactBook contactBook = MySQLiteHelper.Instance.ReadContact(1);
+            System.Diagnostics.Debug.WriteLine("contactBook nome: "+ contactBook.Name);
 
         }
 
