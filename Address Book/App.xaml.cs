@@ -27,6 +27,8 @@ namespace Address_Book
     {
         private TransitionCollection transitions;
 
+        public static string  DB_PATH = Path.Combine(Windows.Storage.ApplicationData.Current.LocalFolder.Path, "contacts.sqlite");
+
         /// <summary>
         /// Initializes the singleton application object.  This is the first line of authored code
         /// executed, and as such is the logical equivalent of main() or WinMain().
