@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Address_Book.Model;
+using Address_Book.ViewModel;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -27,6 +29,13 @@ namespace Address_Book
             this.InitializeComponent();
 
             this.NavigationCacheMode = NavigationCacheMode.Required;
+
+           // MySQLiteHelper Db_Helper = new MySQLiteHelper();
+            // Db_Helper.onCreate();
+            //  Db_Helper.Insert(new ContactBook("Igor Vilar", "61 8300-5524", "Rua 666")); 
+           // ContactBook contactBook = Db_Helper.ReadContact(1);
+         ///   System.Diagnostics.Debug.WriteLine("contactBook nome: "+ contactBook.Name);
+
         }
 
         /// <summary>

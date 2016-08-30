@@ -19,6 +19,8 @@ namespace Address_Book.ViewModel
         //Create Tabble 
         public bool onCreate()
         {
+            System.Diagnostics.Debug.WriteLine("Tabelas criadas");
+
             try
             {
                 if (!CheckFileExists(App.DB_PATH).Result)
@@ -53,7 +55,7 @@ namespace Address_Book.ViewModel
         {
             using (var dbConn = new SQLiteConnection(App.DB_PATH))
             {
-                var existingconact = dbConn.Query<ContactBook>("select * from ContactBook where Id =" + contactid).FirstOrDefault();
+                var existingconact = dbConn.Query<ContactBook>("select * from ContactBook where IdContact =" + contactid).FirstOrDefault();
                 return existingconact;
             }
         }
@@ -73,7 +75,7 @@ namespace Address_Book.ViewModel
         {
             using (var dbConn = new SQLiteConnection(App.DB_PATH))
             {
-                var existingconact = dbConn.Query<ContactBook>("select * from ContactBook where Id =" + contact.IdContact).FirstOrDefault();
+                var existingconact = dbConn.Query<ContactBook>("select * from ContactBook where IdContact =" + contact.IdContact).FirstOrDefault();
                 if (existingconact != null)
                 {
                     existingconact.Name = contact.Name;
@@ -103,7 +105,7 @@ namespace Address_Book.ViewModel
         {
             using (var dbConn = new SQLiteConnection(App.DB_PATH))
             {
-                var existingconact = dbConn.Query<ContactBook>("select * from ContactBook where Id =" + Id).FirstOrDefault();
+                var existingconact = dbConn.Query<ContactBook>("select * from ContactBook where IdContact =" + Id).FirstOrDefault();
                 if (existingconact != null)
                 {
                     dbConn.RunInTransaction(() =>
