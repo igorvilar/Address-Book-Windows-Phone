@@ -74,10 +74,9 @@ namespace Address_Book.ViewModel
                 return existingconact;
         }
         // Retrieve the all contact list from the database. 
-        public ObservableCollection<ContactBook> ReadContacts()
+        public List<ContactBook> ReadContacts()
         {
-                List<ContactBook> myCollection = instance.dbConn.Table<ContactBook>().ToList<ContactBook>();
-                ObservableCollection<ContactBook> ContactsList = new ObservableCollection<ContactBook>(myCollection);
+                List<ContactBook> ContactsList = instance.dbConn.Table<ContactBook>().ToList<ContactBook>();
                 return ContactsList;
         }
 

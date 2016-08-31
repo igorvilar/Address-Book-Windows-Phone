@@ -9,6 +9,9 @@
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
     <Grid>
+        <TextBlock x:Name="textBlock" Margin="10,10,318,0" TextWrapping="Wrap" Text="Contatos" VerticalAlignment="Top" FontSize="18px" HorizontalAlignment="Center"/>
+        <ListView x:Name="listViewContacts" Margin="10,41,10,10" d:LayoutOverrides="LeftPosition, RightPosition, TopPosition, BottomPosition"/>
+        <Button x:ConnectionId='1' x:Name="buttonAddContact" Content="Adicionar" HorizontalAlignment="Right" Margin="0,0,10,0" VerticalAlignment="Top"                   />
 
     </Grid>
 </Page>

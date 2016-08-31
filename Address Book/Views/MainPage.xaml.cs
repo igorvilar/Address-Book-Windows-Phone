@@ -24,17 +24,21 @@ namespace Address_Book
     /// </summary>
     public sealed partial class MainPage : Page
     {
+        private List<ContactBook> listContactBook = new List<ContactBook>();
+
         public MainPage()
         {
             this.InitializeComponent();
 
             this.NavigationCacheMode = NavigationCacheMode.Required;
 
+
             //  MySQLiteHelper Db_Helper = new MySQLiteHelper();
             // Db_Helper.onCreate();
-            MySQLiteHelper.Instance.Insert(new ContactBook("Igor Vilar", "61 8300-5524", "Rua 666")); 
-            ContactBook contactBook = MySQLiteHelper.Instance.ReadContact(1);
-            System.Diagnostics.Debug.WriteLine("contactBook nome: "+ contactBook.Name);
+           // MySQLiteHelper.Instance.Insert(new ContactBook("Igor Vilar", "61 8300-5524", "Rua 666"));
+            //   ContactBook contactBook = MySQLiteHelper.Instance.ReadContact(1);
+            //   System.Diagnostics.Debug.WriteLine("contactBook nome: "+ contactBook.Name);
+            GetContactBookData();
 
         }
 
@@ -52,6 +56,22 @@ namespace Address_Book
             // Windows.Phone.UI.Input.HardwareButtons.BackPressed event.
             // If you are using the NavigationHelper provided by some templates,
             // this event is handled for you.
+        }
+
+        private void GetContactBookData()
+        {
+            listContactBook = MySQLiteHelper.Instance.ReadContacts();
+
+            foreach (ContactBook value in listContactBook)
+            {
+                listViewContacts.Items.Add(value.Name);
+            }
+        }
+
+
+        private void AddContact(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }
