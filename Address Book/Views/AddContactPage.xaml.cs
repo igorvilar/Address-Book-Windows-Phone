@@ -5,6 +5,7 @@ using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
+using Windows.UI.Popups;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Controls.Primitives;
@@ -36,9 +37,14 @@ namespace Address_Book.Views
         {
         }
 
-        private void SaveContact(object sender, RoutedEventArgs e)
+        private async void SaveContact(object sender, RoutedEventArgs e)
         {
-
+            if (textBoxName.Text.Equals(""))
+            {
+                MessageDialog msgbox = new MessageDialog("Informe o nome do contato", "Alert");
+                await msgbox.ShowAsync();
+                return;
+            }
         }
 
     }
