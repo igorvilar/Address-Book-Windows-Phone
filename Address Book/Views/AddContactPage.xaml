@@ -9,6 +9,11 @@
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
     <Grid>
+        <TextBlock x:Name="textBlock" Margin="14,10,270,0" TextWrapping="Wrap" Text="Novo Contato" VerticalAlignment="Top" FontSize="18px" HorizontalAlignment="Left" Width="116"/>
+        <Button x:Name="buttonSaveContact" Content="Salvar" HorizontalAlignment="Right" Margin="0,0,10,0" VerticalAlignment="Top" Click="SaveContact"/>
+        <TextBox x:Name="textBoxName" Margin="10,100,10,0" TextWrapping="Wrap" Text="" d:LayoutOverrides="LeftPosition, RightPosition" PlaceholderText="Name"/>
+        <TextBox x:Name="textBoxAddress" Margin="10,154,10,0" TextWrapping="Wrap" Text="" d:LayoutOverrides="LeftPosition, RightPosition" PlaceholderText="Address"/>
+        <TextBox x:Name="textBoxPhone" Margin="10,208,10,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" d:LayoutOverrides="LeftPosition, RightPosition" PlaceholderText="Phone"/>
 
     </Grid>
 </Page>

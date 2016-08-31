@@ -35,5 +35,11 @@ namespace Address_Book.Views
         protected override void OnNavigatedTo(NavigationEventArgs e)
         {
         }
+
+        private void SaveContact(object sender, RoutedEventArgs e)
+        {
+
+        }
+
     }
 }
