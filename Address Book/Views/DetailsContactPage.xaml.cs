@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Address_Book.Model;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -22,6 +23,8 @@ namespace Address_Book.Views
     /// </summary>
     public sealed partial class DetailsContactPage : Page
     {
+        private ContactBook contactBook = new ContactBook();
+
         public DetailsContactPage()
         {
             this.InitializeComponent();
@@ -34,6 +37,15 @@ namespace Address_Book.Views
         /// This parameter is typically used to configure the page.</param>
         protected override void OnNavigatedTo(NavigationEventArgs e)
         {
+            contactBook = e.Parameter as ContactBook;
+            if (contactBook != null)
+            {
+                //Do your stuff
+                textBlockName.Text = contactBook.Name;
+                textBlockPhone.Text = contactBook.Phone;
+                textBlockAddress.Text = contactBook.Address;
+
+            }
         }
 
         private void EditContact(object sender, RoutedEventArgs e)
