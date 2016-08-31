@@ -67,7 +67,9 @@ namespace Address_Book.Views
 
         private void RemoveContact(object sender, RoutedEventArgs e)
         {
-
+            MySQLiteHelper.Instance.DeleteContact(contactBook.IdContact);
+            Frame.GoBack();
+            Frame.GoBack();
         }
     }
 }
