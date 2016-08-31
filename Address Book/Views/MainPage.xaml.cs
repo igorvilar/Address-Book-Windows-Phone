@@ -1,5 +1,6 @@
 ﻿using Address_Book.Model;
 using Address_Book.ViewModel;
+using Address_Book.Views;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -7,6 +8,7 @@ using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
+using Windows.Phone.UI.Input;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Controls.Primitives;
@@ -31,11 +33,11 @@ namespace Address_Book
             this.InitializeComponent();
 
             this.NavigationCacheMode = NavigationCacheMode.Required;
-
+            HardwareButtons.BackPressed += HardwareButtons_BackPressed;
 
             //  MySQLiteHelper Db_Helper = new MySQLiteHelper();
             // Db_Helper.onCreate();
-           // MySQLiteHelper.Instance.Insert(new ContactBook("Igor Vilar", "61 8300-5524", "Rua 666"));
+            // MySQLiteHelper.Instance.Insert(new ContactBook("Igor Vilar", "61 8300-5524", "Rua 666"));
             //   ContactBook contactBook = MySQLiteHelper.Instance.ReadContact(1);
             //   System.Diagnostics.Debug.WriteLine("contactBook nome: "+ contactBook.Name);
             GetContactBookData();
@@ -71,7 +73,16 @@ namespace Address_Book
 
         private void AddContact(object sender, RoutedEventArgs e)
         {
+            Frame.Navigate(typeof(AddContactPage), null);
+        }
 
+        void HardwareButtons_BackPressed(object sender, BackPressedEventArgs e)
+        {
+            if (Frame.CanGoBack)
+            {
+                e.Handled = true;
+                Frame.GoBack();
+            }
         }
     }
 }
