@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Address_Book.Model;
+using Address_Book.ViewModel;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -45,6 +47,9 @@ namespace Address_Book.Views
                 await msgbox.ShowAsync();
                 return;
             }
+            ContactBook contactBook = new ContactBook(textBoxName.Text, textBoxPhone.Text, textBoxAddress.Text);
+            MySQLiteHelper.Instance.Insert(contactBook);
+            Frame.GoBack();
         }
 
     }
