@@ -10,8 +10,17 @@
 
     <Grid>
         <TextBlock x:Name="textBlock" Margin="10,10,318,0" TextWrapping="Wrap" Text="Contatos" VerticalAlignment="Top" FontSize="18px" HorizontalAlignment="Left"/>
-        <ListView x:Name="listViewContacts" Margin="10,41,10,10" d:LayoutOverrides="LeftPosition, RightPosition, TopPosition, BottomPosition"/>
-        <Button x:ConnectionId='1' x:Name="buttonAddContact" Content="Adicionar" HorizontalAlignment="Right" Margin="0,0,10,0" VerticalAlignment="Top"                   />
+        <ListView x:ConnectionId='1' x:Name="listViewContacts" Margin="10,41,10,10" d:LayoutOverrides="LeftPosition, RightPosition, TopPosition, BottomPosition"                                 SelectionMode="None" IsItemClickEnabled="True" ItemsSource="{Binding PropertyTypes}">
+        <ListView.ItemTemplate>
+            <DataTemplate>
+                <StackPanel Orientation="Vertical" HorizontalAlignment="Stretch" MinWidth="1000">
+                    <TextBlock Text="{Binding Path=Name}" Margin="0, 20 ,20 ,0" HorizontalAlignment="Stretch"/>
+                    <Border BorderThickness="1" BorderBrush="White"/>
+                </StackPanel>
+            </DataTemplate>
+        </ListView.ItemTemplate>
+        </ListView>
+        <Button x:ConnectionId='2' x:Name="buttonAddContact" Content="Adicionar" HorizontalAlignment="Right" Margin="0,0,10,0" VerticalAlignment="Top"                   />
 
     </Grid>
 </Page>

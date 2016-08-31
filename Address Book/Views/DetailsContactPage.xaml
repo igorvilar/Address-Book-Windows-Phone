@@ -1,0 +1,19 @@
+﻿<Page
+    x:Class="Address_Book.Views.DetailsContactPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Address_Book.Views"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid>
+        <TextBlock x:Name="textBlock" Margin="10,10,318,0" TextWrapping="Wrap" Text="Detalhes" VerticalAlignment="Top" FontSize="18px" HorizontalAlignment="Left"/>
+        <Button x:Name="buttonEditContact" Content="Edit" HorizontalAlignment="Right" Margin="0,0,10,0" VerticalAlignment="Top" Click="EditContact"/>
+        <TextBlock x:Name="textBlockName" Margin="10,76,10,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" FontSize="14px" d:LayoutOverrides="LeftPosition, RightPosition"/>
+        <TextBlock x:Name="textBlockPhone" Margin="10,108,10,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" FontSize="14px" d:LayoutOverrides="LeftPosition, RightPosition"/>
+        <TextBlock x:Name="textBlockAddress" Margin="10,140,10,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" FontSize="14px" d:LayoutOverrides="LeftPosition, RightPosition"/>
+
+    </Grid>
+</Page>

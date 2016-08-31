@@ -124,17 +124,19 @@ namespace Address_Book.Address_Book_XamlTypeInfo
 
         private void InitTypeTables()
         {
-            _typeNameTable = new string[4];
+            _typeNameTable = new string[5];
             _typeNameTable[0] = "Address_Book.Views.AddContactPage";
             _typeNameTable[1] = "Windows.UI.Xaml.Controls.Page";
             _typeNameTable[2] = "Windows.UI.Xaml.Controls.UserControl";
-            _typeNameTable[3] = "Address_Book.MainPage";
+            _typeNameTable[3] = "Address_Book.Views.DetailsContactPage";
+            _typeNameTable[4] = "Address_Book.MainPage";
 
-            _typeTable = new global::System.Type[4];
+            _typeTable = new global::System.Type[5];
             _typeTable[0] = typeof(global::Address_Book.Views.AddContactPage);
             _typeTable[1] = typeof(global::Windows.UI.Xaml.Controls.Page);
             _typeTable[2] = typeof(global::Windows.UI.Xaml.Controls.UserControl);
-            _typeTable[3] = typeof(global::Address_Book.MainPage);
+            _typeTable[3] = typeof(global::Address_Book.Views.DetailsContactPage);
+            _typeTable[4] = typeof(global::Address_Book.MainPage);
         }
 
         private int LookupTypeIndexByName(string typeName)
@@ -170,7 +172,8 @@ namespace Address_Book.Address_Book_XamlTypeInfo
         }
 
         private object Activate_0_AddContactPage() { return new global::Address_Book.Views.AddContactPage(); }
-        private object Activate_3_MainPage() { return new global::Address_Book.MainPage(); }
+        private object Activate_3_DetailsContactPage() { return new global::Address_Book.Views.DetailsContactPage(); }
+        private object Activate_4_MainPage() { return new global::Address_Book.MainPage(); }
 
         private global::Windows.UI.Xaml.Markup.IXamlType CreateXamlType(int typeIndex)
         {
@@ -197,9 +200,16 @@ namespace Address_Book.Address_Book_XamlTypeInfo
                 xamlType = new global::Address_Book.Address_Book_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
-            case 3:   //  Address_Book.MainPage
+            case 3:   //  Address_Book.Views.DetailsContactPage
                 userType = new global::Address_Book.Address_Book_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_3_MainPage;
+                userType.Activator = Activate_3_DetailsContactPage;
+                userType.SetIsLocalType();
+                xamlType = userType;
+                break;
+
+            case 4:   //  Address_Book.MainPage
+                userType = new global::Address_Book.Address_Book_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
+                userType.Activator = Activate_4_MainPage;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;

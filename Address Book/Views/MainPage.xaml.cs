@@ -70,7 +70,7 @@ namespace Address_Book
 
             foreach (ContactBook value in listContactBook)
             {
-                listViewContacts.Items.Add(value.Name);
+                listViewContacts.Items.Add(value);
             }
         }
 
@@ -87,6 +87,13 @@ namespace Address_Book
                 e.Handled = true;
                 Frame.GoBack();
             }
+        }
+
+        private void OnItemClickListView(object sender, ItemClickEventArgs e)
+        {
+            var data = (ContactBook)e.ClickedItem;
+            System.Diagnostics.Debug.WriteLine(data.Name);
+
         }
     }
 }
