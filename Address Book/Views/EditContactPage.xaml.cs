@@ -58,7 +58,8 @@ namespace Address_Book.Views
                 return;
             }
             ContactBook contactBook = new ContactBook(textBoxName.Text, textBoxPhone.Text, textBoxAddress.Text);
-            MySQLiteHelper.Instance.Insert(contactBook);
+            MySQLiteHelper.Instance.UpdateContact(contactBook);
+            Frame.GoBack();
             Frame.GoBack();
         }
 
