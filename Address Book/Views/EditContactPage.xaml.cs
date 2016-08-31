@@ -51,13 +51,15 @@ namespace Address_Book.Views
 
         private async void SaveContact(object sender, RoutedEventArgs e)
         {
+            contactBook.Name = textBoxName.Text;
+            contactBook.Phone = textBoxPhone.Text;
+            contactBook.Address = textBoxAddress.Text;
             if (textBoxName.Text.Equals(""))
             {
                 MessageDialog msgbox = new MessageDialog("Informe o nome do contato", "Alert");
                 await msgbox.ShowAsync();
                 return;
             }
-            ContactBook contactBook = new ContactBook(textBoxName.Text, textBoxPhone.Text, textBoxAddress.Text);
             MySQLiteHelper.Instance.UpdateContact(contactBook);
             Frame.GoBack();
             Frame.GoBack();

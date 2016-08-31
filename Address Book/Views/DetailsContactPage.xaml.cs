@@ -51,6 +51,7 @@ namespace Address_Book.Views
         private void EditContact(object sender, RoutedEventArgs e)
         {
             Frame.Navigate(typeof(EditContactPage), contactBook);
+            System.Diagnostics.Debug.WriteLine(contactBook.IdContact);
         }
     }
 }

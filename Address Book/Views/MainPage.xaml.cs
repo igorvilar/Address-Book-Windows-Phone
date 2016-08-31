@@ -93,6 +93,8 @@ namespace Address_Book
         {
             var data = (ContactBook)e.ClickedItem;
             Frame.Navigate(typeof(DetailsContactPage), data);
+            System.Diagnostics.Debug.WriteLine(data.IdContact);
+
 
         }
     }

@@ -83,7 +83,10 @@ namespace Address_Book.ViewModel
         //Update existing conatct 
         public void UpdateContact(ContactBook contact)
         {
-                var existingconact = instance.dbConn.Query<ContactBook>("select * from ContactBook where IdContact =" + contact.IdContact).FirstOrDefault();
+
+            System.Diagnostics.Debug.WriteLine(contact.IdContact);
+
+            var existingconact = instance.dbConn.Query<ContactBook>("select * from ContactBook where IdContact =" + contact.IdContact).FirstOrDefault();
                 if (existingconact != null)
                 {
                     existingconact.Name = contact.Name;
