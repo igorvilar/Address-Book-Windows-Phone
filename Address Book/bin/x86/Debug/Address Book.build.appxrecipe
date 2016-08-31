@@ -64,6 +64,9 @@
     <AppxPackagedFile Include="C:\Users\igor\Documents\Visual Studio 2015\Projects\github\Address Book\Address Book\bin\x86\Debug\Views\DetailsContactPage.xbf">
       <PackagePath>Views\DetailsContactPage.xbf</PackagePath>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\igor\Documents\Visual Studio 2015\Projects\github\Address Book\Address Book\bin\x86\Debug\Views\EditContactPage.xbf">
+      <PackagePath>Views\EditContactPage.xbf</PackagePath>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\igor\Documents\Visual Studio 2015\Projects\github\Address Book\Address Book\bin\x86\Debug\Views\MainPage.xbf">
       <PackagePath>Views\MainPage.xbf</PackagePath>
     </AppxPackagedFile>

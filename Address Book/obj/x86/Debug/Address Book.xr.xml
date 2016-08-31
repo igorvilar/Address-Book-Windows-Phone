@@ -39,6 +39,7 @@
     </RootType>
     <RootType FullName="Address_Book.Views.AddContactPage" />
     <RootType FullName="Address_Book.Views.DetailsContactPage" />
+    <RootType FullName="Address_Book.Views.EditContactPage" />
     <RootType FullName="Windows.UI.Xaml.Controls.ListView">
       <RootProperty Name="Margin" />
       <RootProperty Name="SelectionMode" />

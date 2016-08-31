@@ -21,11 +21,10 @@ namespace Address_Book.Views
     /// <summary>
     /// An empty page that can be used on its own or navigated to within a Frame.
     /// </summary>
-    public sealed partial class DetailsContactPage : Page
+    public sealed partial class EditContactPage : Page
     {
-        private ContactBook contactBook = new ContactBook();
-
-        public DetailsContactPage()
+        private ContactBook contactBook = new ContactBook(); 
+        public EditContactPage()
         {
             this.InitializeComponent();
         }
@@ -41,16 +40,21 @@ namespace Address_Book.Views
             if (contactBook != null)
             {
                 //Do your stuff
-                textBlockName.Text = contactBook.Name;
-                textBlockPhone.Text = contactBook.Phone;
-                textBlockAddress.Text = contactBook.Address;
+                textBoxName.Text = contactBook.Name;
+                textBoxPhone.Text = contactBook.Phone;
+                textBoxAddress.Text = contactBook.Address;
 
             }
         }
 
-        private void EditContact(object sender, RoutedEventArgs e)
+        private void SaveContact(object sender, RoutedEventArgs e)
         {
-            Frame.Navigate(typeof(EditContactPage), contactBook);
+
+        }
+
+        private void RemoveContact(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }

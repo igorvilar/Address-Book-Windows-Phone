@@ -92,7 +92,6 @@ namespace Address_Book
         private void OnItemClickListView(object sender, ItemClickEventArgs e)
         {
             var data = (ContactBook)e.ClickedItem;
-            System.Diagnostics.Debug.WriteLine(data.Name);
             Frame.Navigate(typeof(DetailsContactPage), data);
 
         }

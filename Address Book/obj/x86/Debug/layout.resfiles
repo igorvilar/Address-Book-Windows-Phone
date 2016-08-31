@@ -8,4 +8,5 @@ Address Book.xr.xml
 App.xbf
 Views\AddContactPage.xbf
 Views\DetailsContactPage.xbf
+Views\EditContactPage.xbf
 Views\MainPage.xbf

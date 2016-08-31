@@ -41,3 +41,8 @@ C:\Users\igor\Documents\Visual Studio 2015\Projects\github\Address Book\Address 
 C:\Users\igor\Documents\Visual Studio 2015\Projects\github\Address Book\Address Book\obj\x86\Debug\Views\DetailsContactPage.xaml
 C:\Users\igor\Documents\Visual Studio 2015\Projects\github\Address Book\Address Book\obj\x86\Debug\Views\DetailsContactPage.xbf
 C:\Users\igor\Documents\Visual Studio 2015\Projects\github\Address Book\Address Book\bin\x86\Debug\Views\DetailsContactPage.xbf
+C:\Users\igor\Documents\Visual Studio 2015\Projects\github\Address Book\Address Book\bin\x86\Debug\Views\EditContactPage.xbf
+C:\Users\igor\Documents\Visual Studio 2015\Projects\github\Address Book\Address Book\obj\x86\Debug\Views\EditContactPage.g.i.cs
+C:\Users\igor\Documents\Visual Studio 2015\Projects\github\Address Book\Address Book\obj\x86\Debug\Views\EditContactPage.g.cs
+C:\Users\igor\Documents\Visual Studio 2015\Projects\github\Address Book\Address Book\obj\x86\Debug\Views\EditContactPage.xaml
+C:\Users\igor\Documents\Visual Studio 2015\Projects\github\Address Book\Address Book\obj\x86\Debug\Views\EditContactPage.xbf

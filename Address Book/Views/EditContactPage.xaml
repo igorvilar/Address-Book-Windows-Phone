@@ -1,0 +1,19 @@
+﻿<Page
+    x:Class="Address_Book.Views.EditContactPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Address_Book.Views"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid>
+        <TextBlock x:Name="textBlock" Margin="10,10,318,0" TextWrapping="Wrap" Text="Editar" VerticalAlignment="Top" FontSize="18px" HorizontalAlignment="Left"/>
+        <Button x:Name="buttonSaveContact" Content="Save" HorizontalAlignment="Right" Margin="0,0,10,0" VerticalAlignment="Top" Click="SaveContact"/>
+        <TextBox x:Name="textBoxName" Margin="10,100,10,0" TextWrapping="Wrap" Text="" d:LayoutOverrides="LeftPosition, RightPosition" PlaceholderText="Name"/>
+        <TextBox x:Name="textBoxAddress" Margin="10,154,10,0" TextWrapping="Wrap" Text="" d:LayoutOverrides="LeftPosition, RightPosition" PlaceholderText="Address"/>
+        <TextBox x:Name="textBoxPhone" Margin="10,208,10,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" d:LayoutOverrides="LeftPosition, RightPosition" PlaceholderText="Phone"/>
+        <Button x:Name="buttonRemoveContact" Content="Apagar Contato" HorizontalAlignment="Stretch" Margin="66,275,62,307" VerticalAlignment="Stretch" d:LayoutOverrides="Height" Click="RemoveContact"/>
+    </Grid>
+</Page>
